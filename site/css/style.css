@@ -1,21 +1,21 @@
 /*POLICES DE CARACTERES */
 @font-face {
     font-family: 'HARD_ROCK';
-    src: url('../img/HARD_ROCK.ttf') format("truetype"), ;
+    src: url('..asset/font/HARD_ROCK.ttf') format("truetype"), ;
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'rocknroll_typo_crazy';
-    src: url('../img/rocknroll_typo_crazy.ttf') format("truetype"), ;
+    src: url('..asset/font/rocknroll_typo_crazy.ttf') format("truetype"), ;
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TheDark';
-    src: url('../img/TheDark.ttf') format("truetype"), ;
+    src: url('..asset/font/TheDark.ttf') format("truetype"), ;
     font-weight: normal;
     font-style: normal;
 }
