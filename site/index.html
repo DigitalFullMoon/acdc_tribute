@@ -18,38 +18,66 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">
+        Aller au contenu principal
+    </a>
+
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark d-inline-block w-75 fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark d-inline-block w-75 fixed-top" aria-label="Navigation principale">
             <div class="container">
-                <a class="navbar-brand text-white text-uppercase fw-bold" href="#">AC<i
-                        class="fa-solid fa-bolt text-danger fs-2"></i>DC</a>
+
+                <!-- Logo / Home -->
+                <a class="navbar-brand text-white text-uppercase fw-bold" href="#top" aria-current="page">
+                    AC<i class="fa-solid fa-bolt text-danger fs-2" aria-hidden="true"></i>DC
+                </a>
+
+                <!-- Bouton menu mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Liens -->
                 <div class="collapse navbar-collapse justify-content-start align-items-center" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-danger text-uppercase fw-bold">Accueil</a>
+                            <a href="#top" class="nav-link text-danger text-uppercase fw-bold" aria-current="page">
+                                Accueil
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="#Membres" class="nav-link text-danger text-uppercase fw-bold">Membres</a>
+                            <a href="#membres" class="nav-link text-danger text-uppercase fw-bold">
+                                Membres
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="#Discographie" class="nav-link text-danger text-uppercase fw-bold">Discographie</a>
+                            <a href="#discographie" class="nav-link text-danger text-uppercase fw-bold">
+                                Discographie
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="#dates" class="nav-link text-danger text-uppercase fw-bold">Agenda des concerts</a>
+                            <a href="#dates" class="nav-link text-danger text-uppercase fw-bold">
+                                Agenda des concerts
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link text-danger text-uppercase fw-bold">Contact</a>
+                            <a href="#contact" class="nav-link text-danger text-uppercase fw-bold">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
-    <main>
+
+    <main id="main-content" role="main">
+
         <!-- CARROUSEL -->
         <!-- GRAND ECRAN -->
         <div class="container-fluid" id="carousel1">
@@ -64,20 +92,23 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="asset/img/ac-dc-1.webp" class="d-block w-75 mx-auto" alt="acdc1">
+                        <img src="asset/img/ac-dc-1.webp" class="d-block w-75 mx-auto" alt="Angus Young ACDC">
                     </div>
                     <div class="carousel-item">
-                        <img src="asset/img/ac-dc-2.webp" class="d-block w-75 mx-auto" alt="acdc2">
+                        <img src="asset/img/ac-dc-2.webp" class="d-block w-75 mx-auto" alt="Logo ACDC">
                     </div>
                     <div class="carousel-item">
-                        <img src="asset/img/ac-dc-3.webp" class="d-block w-75 mx-auto" alt="acdc3">
+                        <img src="asset/img/ac-dc-3.webp" class="d-block w-75 mx-auto"
+                            alt="Angus Young et Brian Johnson ACDC">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselACDC" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselACDC"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Précédent</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselACDC" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselACDC"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Suivant</span>
                 </button>
@@ -96,13 +127,14 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="asset/img/ac-dc-1.webp" class="d-block w-100" alt="acdc1">
+                        <img src="asset/img/ac-dc-1.webp" class="d-block w-100" alt="Angus Young ACDC">
                     </div>
                     <div class="carousel-item">
-                        <img src="asset/img/ac-dc-2.webp" class="d-block w-100" alt="acdc2">
+                        <img src="asset/img/ac-dc-2.webp" class="d-block w-100" alt="Logo ACDC">
                     </div>
                     <div class="carousel-item">
-                        <img src="asset/img/ac-dc-3.webp" class="d-block w-100" alt="acdc3">
+                        <img src="asset/img/ac-dc-3.webp" class="d-block w-100"
+                            alt="Angus Young et Brian Johnson ACDC">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselACDC2"
@@ -117,9 +149,10 @@
                 </button>
             </div>
         </div>
+
         <!-- LES MEMBRES DU GROUPES -->
         <div class="membres" id="membres">
-            <h2 class="text-white text-center my-3 text-uppercase" id="Membres">AC<i
+            <h2 class="text-white text-center my-3 text-uppercase">AC<i
                     class="fa-solid fa-bolt text-danger fs-2"></i>DC
                 <span class="ms-4">Les membres du Groupe</span>
             </h2>
@@ -132,26 +165,26 @@
                         </p>
                     </li>
                     <li>
-                        <img src="asset/img/angus-young.webp" alt="Brian Johnson"
+                        <img src="asset/img/angus-young.webp" alt="Angus Young"
                             class="img-fluid border border-white border-5" />
                         <p class="text-white text-center mx-auto align-items-center fw-bold">Angus Young (Guitar
                             Solo)
                         </p>
                     </li>
                     <li>
-                        <img src="asset/img/steve-young.webp" alt="Brian Johnson"
+                        <img src="asset/img/steve-young.webp" alt="Steve Young"
                             class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Steve Oung (Guitare)
+                        <p class="text-white text-center mx-auto align-items-center fw-bold">Steve Young (Guitare)
                         </p>
                     </li>
                     <li>
-                        <img src="asset/img/cliff-williams.webp" alt="Brian Johnson"
+                        <img src="asset/img/cliff-williams.webp" alt="Cliff Williams"
                             class="img-fluid border border-white border-5" />
                         <p class="text-white text-center mx-auto align-items-center fw-bold">Cliff Williams (Basse)
                         </p>
                     </li>
                     <li>
-                        <img src="asset/img/chris-slade.webp" alt="Brian Johnson"
+                        <img src="asset/img/chris-slade.webp" alt="Chris Slade"
                             class="img-fluid border border-white border-5" />
                         <p class="text-white text-center mx-auto align-items-center fw-bold">Chris Slade (Batterie)
                         </p>
@@ -159,13 +192,13 @@
                 </ul>
             </div>
         </div>
-        </div>
+
         <!-- DISCOGRAPHIE -->
-        <div>
-            <h2 class="text-white text-center my-3 text-uppercase" id="Discographie">AC<i
+        <div id="discographie">
+            <h2 class="text-white text-center my-3 text-uppercase">AC<i
                     class="fa-solid fa-bolt text-danger fs-2"></i>DC <span class="ms-4">La discographie</span></h2>
             <div class="container d-flex justify-content-around flex-wrap gap-2">
-                <div class="card  border border-dark border-1 shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
+                <div class="card border border-dark border-1 shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
                     <img src="asset/img/Discographie/High-voltage-1975.webp" class="card-img-top px-2 py-1"
                         alt="High-Voltage">
                     <div class="card-body">
@@ -216,7 +249,8 @@
                     </div>
                 </div>
                 <div class="card border border-dark border-1 shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
-                    <img src="asset/img/Discographie/Razor-edge-1990.webp" class="card-img-top px-2 py-1" alt="Razor Edge">
+                    <img src="asset/img/Discographie/Razor-edge-1990.webp" class="card-img-top px-2 py-1"
+                        alt="Razor Edge">
                     <div class="card-body">
                         <h5 class="card-title text-center text-danger">1990 : Razor Edge</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam soluta
@@ -225,7 +259,8 @@
                     </div>
                 </div>
                 <div class="card border border-dark border-1 shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
-                    <img src="asset/img/Discographie/Ballbreaker-1995.webp" class="card-img-top px-2 py-1" alt="Ballbreaker">
+                    <img src="asset/img/Discographie/Ballbreaker-1995.webp" class="card-img-top px-2 py-1"
+                        alt="Ballbreaker">
                     <div class="card-body">
                         <h5 class="card-title text-danger text-center">1995 : Ballbreaker</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam soluta
@@ -244,7 +279,8 @@
                     </div>
                 </div>
                 <div class="card border border-dark border-1 shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
-                    <img src="asset/img/Discographie/Black-ice-2008.webp" class="card-img-top px-2 py-1" alt="Black Ice">
+                    <img src="asset/img/Discographie/Black-ice-2008.webp" class="card-img-top px-2 py-1"
+                        alt="Black Ice">
                     <div class="card-body">
                         <h5 class="card-title text-center text-danger">2008 : Black Ice</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam soluta
@@ -254,12 +290,12 @@
                 </div>
             </div>
         </div>
+
         <!-- AGENDA -->
-        <div>
-            <h2 class="text-white text-center my-3 text-uppercase" id="dates">AC<i
+        <div id="dates">
+            <h2 class="text-white text-center my-3 text-uppercase">AC<i
                     class="fa-solid fa-bolt text-danger fs-2"></i>DC
-                <span class="ms-4">LES
-                    DATES DES CONCERTS</span>
+                <span class="ms-4">LES DATES DES CONCERTS</span>
             </h2>
             <div class="container-fluid d-flex justify-content-around w-75">
                 <table class="table table-dark table-striped table-hover">
@@ -278,7 +314,7 @@
                             <td>Stade de France</td>
                             <td>Paris</td>
                         </tr>
-                        <tr class="table-active">
+                        <tr>
                             <td>12/05/2002</td>
                             <td>21:00</td>
                             <td>Esplanade</td>
@@ -289,32 +325,33 @@
                             <td>20:30</td>
                             <td>Opera</td>
                             <td>Sydney</td>
-                        <tr>
+                        </tr>
                         <tr>
                             <td>12/09/2021</td>
                             <td>20:30</td>
-                            <td class="table-active">Massey Hall</td>
+                            <td>Massey Hall</td>
                             <td>Toronto</td>
-                        <tr>
+                        </tr>
                         <tr>
                             <td>12/09/2022</td>
                             <td>20:30</td>
                             <td>Madisson Square Garden</td>
                             <td>New York</td>
-                        <tr>
+                        </tr>
                         <tr>
                             <td>08/06/2023</td>
                             <td>21:30</td>
                             <td>Stade de France</td>
                             <td>Paris</td>
-                        <tr>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+
         <!-- CONTACT -->
-        <div>
-            <h2 class="text-white text-center my-3 text-uppercase" id="contact">AC<i
+        <div id="contact">
+            <h2 class="text-white text-center my-3 text-uppercase">AC<i
                     class="fa-solid fa-bolt text-danger fs-2"></i>DC
                 <span class="ms-4">Contact</span>
             </h2>
@@ -341,32 +378,31 @@
                             placeholder="VOTRE MESSAGE"></textarea>
                     </div>
                     <div class="d-flex justify-content-center mt-3 gap-3">
-                        <button type="submit" class="btn btn-danger  btn-lg text-white">Envoyer</button>
-                        <button type="reset" class="btn btn-danger  btn-lg text-white">Annuler</button>
+                        <button type="submit" class="btn btn-danger btn-lg text-white">Envoyer</button>
+                        <button type="reset" class="btn btn-danger btn-lg text-white">Annuler</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
+
     <footer>
         <p class="text-white fs-4 fw-bold text-center mt-5 mb-3 pt-5 pb-3">2025 - Tribute - <span>AC<i
                     class="fa-solid fa-bolt text-danger fs-2"></i>DC</span></p>
         <address class="text-white fs-5 fw-normal text-center mb-3 pb-3">
-    <a 
-        href="https://github.com/DigitalFullMoon" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class="fs-4 fw-bold text-white text-decoration-none"
-        aria-label="Github de Jean-François POUX"
-    >
-        @DigitalFullMoon
-    </a>
-</address>
-
+            <a href="https://github.com/DigitalFullMoon" target="_blank" rel="noopener noreferrer"
+                class="fs-4 fw-bold text-white text-decoration-none"
+                aria-label="Github de Jean-François POUX">
+                @DigitalFullMoon
+            </a>
+        </address>
     </footer>
-    <!-- AU CLIC SUR LA NAV DECLENCHEMENT D'UN SON -->
 
-
+    <!-- son de la nav -->
+    <audio id="navClickSound" preload="auto">
+        <source src="asset/sound/soundcheck.ogg" type="audio/ogg">
+        Votre navigateur ne supporte pas l'audio.
+    </audio>
 
 </body>
 

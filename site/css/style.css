@@ -163,3 +163,8 @@ footer a {
     }
     
 }
+
+.nav-link:focus-visible {
+    outline: 3px solid #dc3545;
+    outline-offset: 4px;
+}
