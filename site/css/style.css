@@ -1,170 +1,637 @@
-/*POLICES DE CARACTERES */
+/* ============================================
+   FICHIER: style.css
+   PROJET: AC/DC Tribute Site
+   AUTEUR: DigitalFullMoon
+   DATE: 2025
+   DESCRIPTION: Feuille de style principale
+   ============================================ */
+
+/* ============================================
+   1. DÉCLARATION DES POLICES DE CARACTÈRES
+   ============================================ */
+
+/**
+ * Police personnalisée: HARD_ROCK
+ * Utilisation: Titres principaux, éléments marquants
+ */
 @font-face {
     font-family: 'HARD_ROCK';
-    src: url('..asset/font/HARD_ROCK.ttf') format("truetype"), ;
+    src: url('../asset/font/HARD_ROCK.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Améliore le chargement des polices */
 }
 
+/**
+ * Police personnalisée: rocknroll_typo_crazy
+ * Utilisation: Boutons, éléments interactifs
+ */
 @font-face {
     font-family: 'rocknroll_typo_crazy';
-    src: url('..asset/font/rocknroll_typo_crazy.ttf') format("truetype"), ;
+    src: url('../asset/font/rocknroll_typo_crazy.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
+/**
+ * Police personnalisée: TheDark
+ * Utilisation: En-têtes, navigation
+ */
 @font-face {
     font-family: 'TheDark';
-    src: url('..asset/font/TheDark.ttf') format("truetype"), ;
+    src: url('../asset/font/TheDark.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-/* GESTION DE LA NAVBAR */
-.navbar-brand {
-    font-size: 3rem;
+/* ============================================
+   2. RÈGLES GÉNÉRALES ET RÉINITIALISATIONS
+   ============================================ */
+
+/**
+ * Fond du site avec dégradé rock
+ * Noir et rouge - couleurs emblématiques d'AC/DC
+ */
+body {
+    background: linear-gradient(
+        135deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 1) 32%, 
+        rgba(255, 0, 30, 1) 32%, 
+        rgba(255, 0, 30, 1) 67%, 
+        rgba(0, 0, 0, 1) 67%, 
+        rgba(0, 0, 0, 1) 100%
+    );
+    min-height: 100vh;
+    margin: 0;
 }
 
-.navbar-toggler-icon {
-    filter: invert(100%);
-    /* Rend l'icône blanche */
+/* ============================================
+   3. ACCESSIBILITÉ
+   ============================================ */
+
+/**
+ * Skip link - Navigation clavier
+ * Permet aux utilisateurs de sauter directement au contenu
+ */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    transition: top 0.3s ease;
 }
 
-@keyframes mouvement {
-    0% {
-        /*debut animation*/
-        transform: translateY(0);
-        /*axe horizontal decalage vertical à 0*/
-    }
-
-    100% {
-        /*fint animation*/
-        transform: translateY(15px);
-        /*axe horizontal decalage vertical à 15px*/
-    }
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid white;
+    outline-offset: 2px;
 }
 
-.navbar-nav .nav-link:hover {
-    border-bottom: 2px solid white;
-    padding-bottom: 2px;
-    animation: mouvement 0.3s ease-in-out forwards, grisrouge 0.3s ease-in-out forwards;
-    color: white !important;
+/**
+ * Focus visible pour navigation clavier
+ */
+.nav-link:focus-visible {
+    outline: 3px solid #dc3545;
+    outline-offset: 4px;
+    border-radius: 2px;
 }
 
-/* GESTION POLICES DE CARACTERES */
+/* ============================================
+   4. HEADER ET NAVIGATION
+   ============================================ */
+
+/**
+ * En-tête - Application de la police TheDark
+ */
 header {
     font-family: 'TheDark';
 }
 
-h2 {
-    font-family: 'TheDark';
+/**
+ * Logo principal - Taille augmentée pour visibilité
+ */
+.navbar-brand {
+    font-size: 3rem;
+    letter-spacing: 1px;
 }
 
+/**
+ * Icône du menu hamburger - Inversion pour contraste
+ */
+.navbar-toggler-icon {
+    filter: invert(100%); /* Blanc sur fond sombre */
+}
+
+/**
+ * Animation des liens de navigation au survol
+ * Crée un effet de mouvement vertical
+ */
+@keyframes mouvement {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(4px); /* Réduit pour plus de subtilité */
+    }
+}
+
+@keyframes grisrouge {
+    0% {
+        color: #dc3545;
+    }
+    100% {
+        color: white;
+    }
+}
+
+/**
+ * État hover des liens de navigation
+ */
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    animation: mouvement 0.3s ease-in-out forwards, 
+              grisrouge 0.3s ease-in-out forwards;
+    color: white !important;
+}
+
+/* ============================================
+   5. TYPOGRAPHIE ET TEXTES
+   ============================================ */
+
+/**
+ * Titres h2 - Style cohérent
+ */
+h2 {
+    font-family: 'TheDark';
+    text-transform: uppercase;
+}
+
+/**
+ * Boutons - Style rock avec police distinctive
+ */
 .btn {
     font-family: 'rocknroll_typo_crazy';
     font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-/*OMBRES DE L ECLAIR ACDC */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   6. ÉLÉMENTS SPÉCIFIQUES
+   ============================================ */
+
+/**
+ * Éclairs AC/DC - Effets d'ombre
+ * Différenciation header/footer pour contraste
+ */
 i {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    /* Ombre noire légère */
 }
 
 header i,
 footer i {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
-    /* Ombre blanche */
 }
 
-/* GESTION COULEURS*/
-body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 32%, rgba(0, 0, 0, 1) 32%, rgba(255, 0, 30, 1) 32%, rgba(255, 0, 30, 1) 67%, rgba(0, 0, 0, 1) 67%);
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-}
-
-/* GESTION IMAGES MEMBRES DU GROUPE*/
+/**
+ * Images des membres - Carré fixe avec crop
+ */
 .membres img {
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    object-fit: cover; /* Maintient les proportions */
+    border: 5px solid white;
+    transition: transform 0.3s ease;
 }
 
-/* GESTION FORMULAIRE DE CONTACT*/
-/* Personnalisation du placeholder */
+.membres img:hover {
+    transform: scale(1.05);
+}
+
+/**
+ * Liens du footer - Suppression soulignement
+ */
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #dc3545;
+}
+
+/* ============================================
+   7. FORMULAIRES
+   ============================================ */
+
+/**
+ * Placeholders - Style rock personnalisé
+ */
 .form-control::placeholder {
     color: #dc3545;
     font-weight: bold;
     font-size: 1.2rem;
     font-family: 'rocknroll_typo_crazy';
+    opacity: 0.9;
 }
 
-/* MEDIA QUERIES POUR MOBILE */
+/**
+ * Champs de formulaire - Focus state
+ */
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* ============================================
+   8. COMPOSANTS SPÉCIFIQUES
+   ============================================ */
+
+/**
+ * Barre de navigation personnalisée
+ * Utilisée pour des ajustements spécifiques
+ */
+.custom-navbar {
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 1020; /* Au-dessus du carrousel */
+}
+
+/* ============================================
+   9. CARROUSELS (GESTION DE L'AFFICHAGE)
+   ============================================ */
+
+/**
+ * Carrousel grand écran
+ */
+#carousel1 {
+    padding-top: 8%;
+}
+
+/**
+ * Carrousel petit écran
+ */
+#carousel2 {
+    padding-top: 20%;
+}
+
+/* ============================================
+   10. MÉDIAS QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* ---------- MOBILE (max-width: 576px) ---------- */
 @media screen and (max-width: 576px) {
+    
+    /* Navigation mobile */
     .navbar-nav .nav-link {
         font-size: 1rem;
+        text-align: center;
     }
-
+    
     .custom-navbar {
         height: 80px;
         width: 100%;
-        margin: 0 auto;
-        border-radius: 10px;
-        z-index: -1;
-    }
-
-    #carousel1 {
-        display: none;
-    }
-    #carousel2 {
-        padding-top: 20%;
+        border-radius: 0; /* Pleine largeur */
     }
     
-}
-
-
-/* MEDIA QUERIES POUR GRANDS ECRANS */
-@media screen and (min-width: 992px) {
-    .custom-navbar {
-        height: 120px;
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 10px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
-
-    #carousel2 {
+    /* Carrousels - Afficher seulement la version mobile */
+    #carousel1 {
         display: none;
     }
-    #carousel1 {
-        padding-top: 8%;
+    
+    #carousel2 {
+        padding-top: 25%; /* Ajusté pour navbar fixe */
+    }
+    
+    /* Section membres - Images réduites */
+    .membres img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .membres ul {
+        justify-content: center;
+        gap: 1rem;
     }
 }
-/* MEDIA QUERIES POUR MOYENS ECRANS */
+
+/* ---------- TABLETTE (577px - 991px) ---------- */
 @media screen and (min-width: 577px) and (max-width: 991px) {
+    
+    /* Carrousels - Version mobile pour tablettes */
     #carousel1 {
         display: none;
         padding-top: 10%;
         margin-top: 10%;
     }
     
+    #carousel2 {
+        padding-top: 15%;
+    }
+    
+    /* Section membres - Ajustements */
+    .membres img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Table des concerts - Scroll horizontal */
+    #dates .container-fluid {
+        width: 95% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scroll iOS */
+    }
+    
+    #dates table {
+        min-width: 600px; /* Largeur minimale pour lisibilité */
+    }
 }
 
-.nav-link:focus-visible {
-    outline: 3px solid #dc3545;
-    outline-offset: 4px;
+/* ---------- DESKTOP (min-width: 992px) ---------- */
+@media screen and (min-width: 992px) {
+    
+    /* Navigation desktop */
+    .custom-navbar {
+        height: 120px;
+        width: 90%;
+        border-radius: 10px;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Titres - Taille augmentée */
+    h2 {
+        font-size: 3rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    /* Carrousels - Afficher seulement la version desktop */
+    #carousel2 {
+        display: none;
+    }
+    
+    #carousel1 {
+        padding-top: 8%; /* Ajusté pour navbar fixe */
+    }
 }
+
+/* ---------- TRÈS GRANDS ÉCRANS (min-width: 1200px) ---------- */
+@media screen and (min-width: 1200px) {
+    
+    /* Améliorations pour grands écrans */
+    .container {
+        max-width: 1140px;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 3.5rem;
+    }
+}
+
+/* ============================================
+   11. AMÉLIORATIONS D'ACCESSIBILITÉ SUPPLEMENTAIRES
+   ============================================ */
+
+/**
+ * Focus pour éléments interactifs
+ */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #dc3545;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/**
+ * Réduction des animations pour préférences utilisateur
+ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        animation: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .membres img:hover {
+        transform: none;
+    }
+}
+
+/**
+ * Contraste élevé pour malvoyants
+ */
+@media (prefers-contrast: high) {
+    .navbar-nav .nav-link:hover {
+        border-bottom: 3px solid white;
+    }
+    
+    .btn {
+        border: 2px solid white;
+    }
+}
+
+/* ============================================
+   12. CLASSES UTILITAIRES PERSONNALISÉES
+   ============================================ */
+
+/**
+ * Pour les images responsives
+ */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+ * Pour le texte caché visuellement mais accessible
+ */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ============================================
+   13. OVERLAY ET CONTRÔLES AUDIO
+   ============================================ */
+
+/**
+ * Overlay de permission audio
+ */
+.audio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.audio-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.audio-overlay-content {
+    text-align: center;
+    max-width: 500px;
+    padding: 2rem;
+    background: rgba(40, 40, 40, 0.9);
+    border-radius: 15px;
+    border: 3px solid #dc3545;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.audio-overlay-content h2 {
+    font-family: 'TheDark', sans-serif;
+    font-size: 2.5rem;
+}
+
+.audio-overlay-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/**
+ * Bouton de contrôle volume flottant
+ */
+.volume-control-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(220, 53, 69, 0.9);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.volume-control-btn:hover {
+    background: rgba(220, 53, 69, 1);
+    transform: scale(1.1);
+}
+
+.volume-control-btn:focus {
+    outline: 3px solid white;
+    outline-offset: 2px;
+}
+
+/**
+ * Indicateur visuel musique en cours
+ */
+@keyframes musicPulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+body.music-playing::after {
+    content: '♪';
+    position: fixed;
+    bottom: 75px;
+    right: 25px;
+    color: #dc3545;
+    font-size: 12px;
+    animation: musicPulse 2s infinite;
+    z-index: 1000;
+}
+
+/**
+ * Adaptations responsive
+ */
+@media screen and (max-width: 768px) {
+    .audio-overlay-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .audio-overlay-content h2 {
+        font-size: 2rem;
+    }
+    
+    .volume-control-btn {
+        bottom: 70px; /* Au-dessus de la barre mobile */
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/**
+ * Mode réduction son
+ */
+@media (prefers-reduced-sound: reduce) {
+    .audio-overlay {
+        display: none !important;
+    }
+    
+    .volume-control-btn {
+        display: none !important;
+    }
+    
+    body.music-playing::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   FIN DU FICHIER STYLE.CSS
+   ============================================ */
