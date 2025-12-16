@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="js/bootstrap.bundle.js" defer></script>
-
     <script src="https://kit.fontawesome.com/7095ee4a1c.js" crossorigin="anonymous" defer></script>
-
     <script src="js/script.js" defer></script>
 
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -17,7 +15,8 @@
     <title>AC/DC Tribute</title>
 </head>
 
-<body>
+<body id="top">
+
     <a href="#main-content" class="skip-link">
         Aller au contenu principal
     </a>
@@ -26,49 +25,23 @@
         <nav class="navbar navbar-expand-lg bg-dark d-inline-block w-75 fixed-top" aria-label="Navigation principale">
             <div class="container">
 
-                <!-- Logo / Home -->
                 <a class="navbar-brand text-white text-uppercase fw-bold" href="#top" aria-current="page">
                     AC<i class="fa-solid fa-bolt text-danger fs-2" aria-hidden="true"></i>DC
                 </a>
 
-                <!-- Bouton menu mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
                     aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Liens -->
-                <div class="collapse navbar-collapse justify-content-start align-items-center" id="menu">
+                <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#top" class="nav-link text-danger text-uppercase fw-bold" aria-current="page">
-                                Accueil
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#membres" class="nav-link text-danger text-uppercase fw-bold">
-                                Membres
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#discographie" class="nav-link text-danger text-uppercase fw-bold">
-                                Discographie
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#dates" class="nav-link text-danger text-uppercase fw-bold">
-                                Agenda des concerts
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link text-danger text-uppercase fw-bold">
-                                Contact
-                            </a>
-                        </li>
+                        <li class="nav-item"><a href="#top" class="nav-link text-danger fw-bold">Accueil</a></li>
+                        <li class="nav-item"><a href="#membres" class="nav-link text-danger fw-bold">Membres</a></li>
+                        <li class="nav-item"><a href="#discographie"
+                                class="nav-link text-danger fw-bold">Discographie</a></li>
+                        <li class="nav-item"><a href="#dates" class="nav-link text-danger fw-bold">Agenda</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-danger fw-bold">Contact</a></li>
                     </ul>
                 </div>
 
@@ -76,8 +49,7 @@
         </nav>
     </header>
 
-    <main id="main-content" role="main">
-
+    <main id="main-content">
         <!-- CARROUSEL -->
         <!-- GRAND ECRAN -->
         <div class="container-fluid" id="carousel1">
@@ -150,374 +122,258 @@
             </div>
         </div>
 
-        <!-- LES MEMBRES DU GROUPES -->
-        <div class="membres" id="membres">
-            <h2 class="text-white text-center my-3 text-uppercase">AC<i
-                    class="fa-solid fa-bolt text-danger fs-2"></i>DC
-                <span class="ms-4">Les membres du Groupe</span>
+
+        <!-- MEMBRES -->
+        <section class="membres" id="membres">
+            <h2 class="text-white text-center my-3 text-uppercase">
+                AC<i class="fa-solid fa-bolt text-danger fs-2"></i>DC
+                <span class="ms-4">Les membres du groupe</span>
             </h2>
-            <div class="container-fluid d-flex justify-content-around">
-                <ul class="list-unstyled d-flex justify-content-around flex-wrap gap-3">
-                    <li>
-                        <img src="asset/img/brian-johnson.webp" alt="Brian Johnson - Chanteur d'AC/DC"
-                            class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Brian Johnson (Chant)
-                        </p>
-                    </li>
-                    <li>
-                        <img src="asset/img/angus-young.webp" alt="Angus Young - Guitariste solo d'AC/DC"
-                            class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Angus Young (Guitar
-                            Solo)
-                        </p>
-                    </li>
-                    <li>
-                        <img src="asset/img/steve-young.webp" alt="Steve Young - Guitariste d'AC/DC"
-                            class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Steve Young (Guitare)
-                        </p>
-                    </li>
-                    <li>
-                        <img src="asset/img/cliff-williams.webp" alt="Cliff Williams - Bassiste d'AC/DC"
-                            class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Cliff Williams (Basse)
-                        </p>
-                    </li>
-                    <li>
-                        <img src="asset/img/chris-slade.webp" alt="Chris Slade - Batteur d'AC/DC"
-                            class="img-fluid border border-white border-5" />
-                        <p class="text-white text-center mx-auto align-items-center fw-bold">Chris Slade (Batterie)
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
+            <ul class="list-unstyled d-flex justify-content-around flex-wrap gap-3">
+                <li>
+                    <img src="asset/img/brian-johnson.webp" alt="Brian Johnson chanteur AC/DC">
+                    <p class="text-white fw-bold text-center">Brian Johnson</p>
+                </li>
+                <li>
+                    <img src="asset/img/angus-young.webp" alt="Angus Young guitariste AC/DC">
+                    <p class="text-white fw-bold text-center">Angus Young</p>
+                </li>
+                <li>
+                    <img src="asset/img/steve-young.webp" alt="Steve Young guitariste AC/DC">
+                    <p class="text-white fw-bold text-center">Steve Young</p>
+                </li>
+                <li>
+                    <img src="asset/img/cliff-williams.webp" alt="Cliff Williams bassiste AC/DC">
+                    <p class="text-white fw-bold text-center">Cliff Williams</p>
+                </li>
+                <li>
+                    <img src="asset/img/chris-slade.webp" alt="Chris Slade batteur AC/DC">
+                    <p class="text-white fw-bold text-center">Chris Slade</p>
+                </li>
+            </ul>
+        </section>
         <!-- DISCOGRAPHIE -->
-<section id="discographie" aria-labelledby="discographie-title">
-    <h2 id="discographie-title" class="text-white text-center my-3 text-uppercase">
-        AC<i class="fa-solid fa-bolt text-danger fs-2" aria-hidden="true"></i>DC 
-        <span class="ms-4">La discographie</span>
-    </h2>
-    
-    <p class="visually-hidden">
-        Découvrez tous les albums du groupe AC/DC, de leur premier album en 1975 à leurs dernières productions.
-        Chaque carte présente un album avec sa pochette, sa date de sortie et une description.
-    </p>
-    
-    <div class="container d-flex justify-content-around flex-wrap gap-3" role="list" aria-label="Liste des albums d'AC/DC">
-        <!-- Album 1 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album High Voltage sorti en 1975">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/High-voltage-1975.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album High Voltage d'AC/DC - 1975 - Album de hard rock australien"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album High Voltage, premier album studio du groupe AC/DC sorti en 1975
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-danger text-center h5 mb-3">
-                    1975 : <span lang="en">High Voltage</span>
-                </h3>
-                <p class="card-text">
-                    Premier album studio du groupe, marquant le début de leur carrière légendaire. 
-                    Cet album établit le son caractéristique d'AC/DC avec des riffs puissants.
-                </p>
-                <a href="#high-voltage-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album High Voltage (1975)"
-                   onclick="return showAlbumDetails('high-voltage')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album High Voltage</span>
-                </a>
-            </div>
-        </article>
+        <section id="discographie" aria-labelledby="discographie-title">
+            <h2 id="discographie-title" class="text-white text-center my-3 text-uppercase">
+                AC<i class="fa-solid fa-bolt text-danger fs-2" aria-hidden="true"></i>DC
+                <span class="ms-4">La discographie</span>
+            </h2>
 
-        <!-- Album 2 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Highway to Hell sorti en 1979">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Highway-to-hell-1979.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Highway to Hell d'AC/DC - 1979 - Dernier album avec Bon Scott"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Highway to Hell, dernier album avec le chanteur original Bon Scott
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    1979 : <span lang="en">Highway to Hell</span>
-                </h3>
-                <p class="card-text">
-                    Dernier album avec Bon Scott au chant, devenu un classique du hard rock. 
-                    L'album comprend le tube éponyme qui est devenu un hymne du rock.
-                </p>
-                <a href="#highway-to-hell-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Highway to Hell (1979)"
-                   onclick="return showAlbumDetails('highway-to-hell')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Highway to Hell</span>
-                </a>
-            </div>
-        </article>
+            <p class="visually-hidden">
+                Découvrez tous les albums du groupe AC/DC, de leur premier album en 1975 à leurs dernières productions.
+                Chaque carte présente un album avec sa pochette, sa date de sortie et une description.
+            </p>
 
-        <!-- Album 3 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Back in Black sorti en 1980">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Back-in-black-1980.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Back in Black d'AC/DC - 1980 - Album hommage à Bon Scott"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette noire de l'album Back in Black, hommage à Bon Scott et premier album avec Brian Johnson
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    1980 : <span lang="en">Back in Black</span>
-                </h3>
-                <p class="card-text">
-                    Hommage à Bon Scott et premier album avec Brian Johnson. 
-                    C'est l'un des albums les plus vendus de tous les temps dans l'histoire de la musique.
-                </p>
-                <a href="#back-in-black-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Back in Black (1980)"
-                   onclick="return showAlbumDetails('back-in-black')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Back in Black</span>
-                </a>
-            </div>
-        </article>
+            <div class="container d-flex justify-content-around flex-wrap gap-3" role="list"
+                aria-label="Liste des albums d'AC/DC">
+                <!-- Album 1 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album High Voltage sorti en 1975">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/High-voltage-1975.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album High Voltage d'AC/DC - 1975 - Album de hard rock australien"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album High Voltage, premier album studio du groupe AC/DC sorti en 1975
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-danger text-center h5 mb-3">
+                            1975 : <span lang="en">High Voltage</span>
+                        </h3>
+                        <p class="card-text">
+                            Premier album studio du groupe, marquant le début de leur carrière légendaire.
+                            Cet album établit le son caractéristique d'AC/DC avec des riffs puissants.
+                        </p>
+                        
+                    </div>
+                </article>
 
-        <!-- Album 4 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Who Made Who sorti en 1986">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Who-made-who-1986.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Who Made Who d'AC/DC - 1986 - Bande originale de Maximum Overdrive"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Who Made Who, bande originale du film Maximum Overdrive
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-danger text-center h5 mb-3">
-                    1986 : <span lang="en">Who Made Who</span>
-                </h3>
-                <p class="card-text">
-                    Bande originale du film Maximum Overdrive de Stephen King. 
-                    Cet album de compilation contient des titres emblématiques et trois nouveaux morceaux.
-                </p>
-                <a href="#who-made-who-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Who Made Who (1986)"
-                   onclick="return showAlbumDetails('who-made-who')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Who Made Who</span>
-                </a>
-            </div>
-        </article>
+                <!-- Album 2 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Highway to Hell sorti en 1979">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Highway-to-hell-1979.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Highway to Hell d'AC/DC - 1979 - Dernier album avec Bon Scott"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Highway to Hell, dernier album avec le chanteur original Bon Scott
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            1979 : <span lang="en">Highway to Hell</span>
+                        </h3>
+                        <p class="card-text">
+                            Dernier album avec Bon Scott au chant, devenu un classique du hard rock.
+                            L'album comprend le tube éponyme qui est devenu un hymne du rock.
+                        </p>
+                        
+                    </div>
+                </article>
 
-        <!-- Album 5 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Blow Up Your Video sorti en 1988">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Blow-up-your-video-1988.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Blow Up Your Video d'AC/DC - 1988 - Album de retour aux sources"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Blow Up Your Video, marquant un retour au son brut des débuts
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    1988 : <span lang="en">Blow Up Your Video</span>
-                </h3>
-                <p class="card-text">
-                    Album marquant un retour aux sources avec un son plus brut. 
-                    Produit par Harry Vanda et George Young, frère d'Angus et Malcolm.
-                </p>
-                <a href="#blow-up-your-video-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Blow Up Your Video (1988)"
-                   onclick="return showAlbumDetails('blow-up-your-video')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Blow Up Your Video</span>
-                </a>
-            </div>
-        </article>
+                <!-- Album 3 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Back in Black sorti en 1980">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Back-in-black-1980.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Back in Black d'AC/DC - 1980 - Album hommage à Bon Scott"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette noire de l'album Back in Black, hommage à Bon Scott et premier album avec Brian
+                            Johnson
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            1980 : <span lang="en">Back in Black</span>
+                        </h3>
+                        <p class="card-text">
+                            Hommage à Bon Scott et premier album avec Brian Johnson.
+                            C'est l'un des albums les plus vendus de tous les temps dans l'histoire de la musique.
+                        </p>
+                    </div>
+                </article>
 
-        <!-- Album 6 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album The Razors Edge sorti en 1990">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Razor-edge-1990.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album The Razors Edge d'AC/DC - 1990 - Album avec le tube Thunderstruck"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album The Razors Edge, contenant le célèbre titre Thunderstruck
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    1990 : <span lang="en">The Razors Edge</span>
-                </h3>
-                <p class="card-text">
-                    Album contenant le tube "Thunderstruck". 
-                    Marque le retour commercial du groupe avec un succès international renouvelé.
-                </p>
-                <a href="#razors-edge-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album The Razors Edge (1990)"
-                   onclick="return showAlbumDetails('razors-edge')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album The Razors Edge</span>
-                </a>
-            </div>
-        </article>
+                <!-- Album 4 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Who Made Who sorti en 1986">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Who-made-who-1986.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Who Made Who d'AC/DC - 1986 - Bande originale de Maximum Overdrive"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Who Made Who, bande originale du film Maximum Overdrive
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-danger text-center h5 mb-3">
+                            1986 : <span lang="en">Who Made Who</span>
+                        </h3>
+                        <p class="card-text">
+                            Bande originale du film Maximum Overdrive de Stephen King.
+                            Cet album de compilation contient des titres emblématiques et trois nouveaux morceaux.
+                        </p>
+                    </div>
+                </article>
 
-        <!-- Album 7 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Ballbreaker sorti en 1995">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Ballbreaker-1995.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Ballbreaker d'AC/DC - 1995 - Album produit par Rick Rubin"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Ballbreaker, produit par le légendaire Rick Rubin
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-danger text-center h5 mb-3">
-                    1995 : <span lang="en">Ballbreaker</span>
-                </h3>
-                <p class="card-text">
-                    Produit par Rick Rubin, cet album présente un son lourd et puissant. 
-                    Retour de Phil Rudd à la batterie après dix ans d'absence.
-                </p>
-                <a href="#ballbreaker-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Ballbreaker (1995)"
-                   onclick="return showAlbumDetails('ballbreaker')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Ballbreaker</span>
-                </a>
-            </div>
-        </article>
+                <!-- Album 5 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem"
+                    aria-label="Album Blow Up Your Video sorti en 1988">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Blow-up-your-video-1988.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Blow Up Your Video d'AC/DC - 1988 - Album de retour aux sources"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Blow Up Your Video, marquant un retour au son brut des débuts
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            1988 : <span lang="en">Blow Up Your Video</span>
+                        </h3>
+                        <p class="card-text">
+                            Album marquant un retour aux sources avec un son plus brut.
+                            Produit par Harry Vanda et George Young, frère d'Angus et Malcolm.
+                        </p>
+                    </div>
+                </article>
 
-        <!-- Album 8 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Stiff Upper Lip sorti en 2000">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Stiff-upper-lip-2000.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Stiff Upper Lip d'AC/DC - 2000 - Album au son blues-rock"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Stiff Upper Lip, avec un retour aux influences blues
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    2000 : <span lang="en">Stiff Upper Lip</span>
-                </h3>
-                <p class="card-text">
-                    Album marquant les 25 ans de carrière du groupe. 
-                    Son plus orienté blues-rock avec des riffs groovy caractéristiques.
-                </p>
-                <a href="#stiff-upper-lip-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Stiff Upper Lip (2000)"
-                   onclick="return showAlbumDetails('stiff-upper-lip')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Stiff Upper Lip</span>
-                </a>
-            </div>
-        </article>
+                <!-- Album 6 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album The Razors Edge sorti en 1990">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Razor-edge-1990.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album The Razors Edge d'AC/DC - 1990 - Album avec le tube Thunderstruck"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album The Razors Edge, contenant le célèbre titre Thunderstruck
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            1990 : <span lang="en">The Razors Edge</span>
+                        </h3>
+                        <p class="card-text">
+                            Album contenant le tube "Thunderstruck".
+                            Marque le retour commercial du groupe avec un succès international renouvelé.
+                        </p>
+                    </div>
+                </article>
 
-        <!-- Album 9 -->
-        <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded" 
-                 style="width: min(100%, 400px);" 
-                 role="listitem"
-                 aria-label="Album Black Ice sorti en 2008">
-            <figure class="mb-0">
-                <img src="asset/img/Discographie/Black-ice-2008.webp" 
-                     class="card-img-top px-2 py-1" 
-                     alt="Pochette de l'album Black Ice d'AC/DC - 2008 - Premier album depuis 8 ans"
-                     loading="lazy"
-                     width="400"
-                     height="400">
-                <figcaption class="visually-hidden">
-                    Pochette de l'album Black Ice, premier album studio depuis 8 ans
-                </figcaption>
-            </figure>
-            <div class="card-body">
-                <h3 class="card-title text-center text-danger h5 mb-3">
-                    2008 : <span lang="en">Black Ice</span>
-                </h3>
-                <p class="card-text">
-                    Premier album studio depuis 8 ans, accompagné d'une tournée mondiale. 
-                    Vendu exclusivement chez Walmart aux États-Unis lors de sa sortie.
-                </p>
-                <a href="#black-ice-details" 
-                   class="btn btn-danger float-end clearfix"
-                   aria-label="En savoir plus sur l'album Black Ice (2008)"
-                   onclick="return showAlbumDetails('black-ice')">
-                    Lire plus...
-                    <span class="visually-hidden">à propos de l'album Black Ice</span>
-                </a>
+                <!-- Album 7 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Ballbreaker sorti en 1995">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Ballbreaker-1995.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Ballbreaker d'AC/DC - 1995 - Album produit par Rick Rubin"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Ballbreaker, produit par le légendaire Rick Rubin
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-danger text-center h5 mb-3">
+                            1995 : <span lang="en">Ballbreaker</span>
+                        </h3>
+                        <p class="card-text">
+                            Produit par Rick Rubin, cet album présente un son lourd et puissant.
+                            Retour de Phil Rudd à la batterie après dix ans d'absence.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Album 8 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Stiff Upper Lip sorti en 2000">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Stiff-upper-lip-2000.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Stiff Upper Lip d'AC/DC - 2000 - Album au son blues-rock"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Stiff Upper Lip, avec un retour aux influences blues
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            2000 : <span lang="en">Stiff Upper Lip</span>
+                        </h3>
+                        <p class="card-text">
+                            Album marquant les 25 ans de carrière du groupe.
+                            Son plus orienté blues-rock avec des riffs groovy caractéristiques.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Album 9 -->
+                <article class="card border border-dark border-1 shadow p-3 mb-4 bg-body rounded"
+                    style="width: min(100%, 400px);" role="listitem" aria-label="Album Black Ice sorti en 2008">
+                    <figure class="mb-0">
+                        <img src="asset/img/Discographie/Black-ice-2008.webp" class="card-img-top px-2 py-1"
+                            alt="Pochette de l'album Black Ice d'AC/DC - 2008 - Premier album depuis 8 ans"
+                            loading="lazy" width="400" height="400">
+                        <figcaption class="visually-hidden">
+                            Pochette de l'album Black Ice, premier album studio depuis 8 ans
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-danger h5 mb-3">
+                            2008 : <span lang="en">Black Ice</span>
+                        </h3>
+                        <p class="card-text">
+                            Premier album studio depuis 8 ans, accompagné d'une tournée mondiale.
+                            Vendu exclusivement chez Walmart aux États-Unis lors de sa sortie.
+                        </p>
+                    </div>
+                </article>
             </div>
-        </article>
-    </div>
-</section>
+        </section>
 
         <!-- AGENDA -->
         <div id="dates">
-            <h2 class="text-white text-center my-3 text-uppercase">AC<i
-                    class="fa-solid fa-bolt text-danger fs-2"></i>DC
+            <h2 class="text-white text-center my-3 text-uppercase">AC<i class="fa-solid fa-bolt text-danger fs-2"></i>DC
                 <span class="ms-4">LES DATES DES CONCERTS</span>
             </h2>
             <div class="container-fluid d-flex justify-content-around w-75">
@@ -570,61 +426,47 @@
                     </tbody>
                 </table>
             </div>
-        </div>
 
-        <!-- CONTACT -->
-        <div id="contact">
-            <h2 class="text-white text-center my-3 text-uppercase">AC<i
-                    class="fa-solid fa-bolt text-danger fs-2"></i>DC
-                <span class="ms-4">Contact</span>
-            </h2>
-            <div class="container py-3 w-50">
-                <form action="" class="row">
-                    <div class="mb-1 col-6">
-                        <label class="form-label" for="nom" class="form-label text-danger"></label>
-                        <input class="form-control" type="text" class="form-control" id="nom" name="nom"
-                            placeholder="NOM" required>
-                    </div>
-                    <div class="mb-1 col-6">
-                        <label class="form-label" for="prenom" class="form-label text-danger"></label>
-                        <input class="form-control" type="text" class="form-control" id="prenom" name="prenom"
-                            placeholder="PRÉNOM" required>
-                    </div>
-                    <div class="mb-1 col-12">
-                        <label class="form-label" for="email" class="form-label text-danger"></label>
-                        <input class="form-control" type="email" class="form-control" id="email" name="email"
-                            placeholder="EMAIL" required>
-                    </div>
-                    <div class="mb-1">
-                        <label for="message" class="form-label text-danger"></label>
-                        <textarea class="form-control" name="message" id="message"
-                            placeholder="VOTRE MESSAGE"></textarea>
-                    </div>
-                    <div class="d-flex justify-content-center mt-3 gap-3">
-                        <button type="submit" class="btn btn-danger btn-lg text-white">Envoyer</button>
-                        <button type="reset" class="btn btn-danger btn-lg text-white">Annuler</button>
-                    </div>
-                </form>
+            <div class="text-end w-75 mx-auto">
+                <a href="https://www.acdc.com/tour/" target="_blank" rel="noopener" class="btn btn-danger">
+                    Lire plus…
+                </a>
             </div>
         </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2 class="text-white text-center my-3 text-uppercase">Contact</h2>
+
+            <form action="https://forms.sonymusicfans.com/campaign/acdc-officialnewsletter/" method="POST"
+                target="_blank" class="w-50 mx-auto">
+
+                <label class="text-white fw-bold">Email *</label>
+                <input class="form-control mb-3" name="field_email_address" type="email" required>
+
+                <label class="text-white fw-bold">First Name *</label>
+                <input class="form-control mb-4" id="firstname" name="field_first_name" type="text" required>
+
+                <div class="d-flex justify-content-center gap-3">
+                    <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
+                    <button type="reset" class="btn btn-danger btn-lg">Annuler</button>
+                </div>
+            </form>
+        </section>
+
     </main>
 
-    <footer>
-        <p class="text-white fs-4 fw-bold text-center mt-5 mb-3 pt-5 pb-3">2025 - Tribute - <span>AC<i
-                    class="fa-solid fa-bolt text-danger fs-2"></i>DC</span></p>
-        <address class="text-white fs-5 fw-normal text-center mb-3 pb-3">
-            <a href="https://github.com/DigitalFullMoon" target="_blank" rel="noopener noreferrer"
-                class="fs-4 fw-bold text-white text-decoration-none"
-                aria-label="Github de Jean-François POUX">
+    <footer class="text-center mt-5">
+        <address>
+            <a href="https://github.com/DigitalFullMoon" target="_blank" class="text-white fw-bold">
                 @DigitalFullMoon
             </a>
         </address>
     </footer>
 
-    <!-- son de la nav -->
-    <audio id="navClickSound" preload="auto">
+    <audio id="navClickSound">
         <source src="asset/sound/soundcheck.ogg" type="audio/ogg">
-        Votre navigateur ne supporte pas l'audio.
     </audio>
 
 </body>
