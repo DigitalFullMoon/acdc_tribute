@@ -66,3 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+    /* ============================
+    MODALS MEMBRES
+    ============================ */
+document.addEventListener("DOMContentLoaded", () => {
+    const memberModals = document.querySelectorAll(".modal");
+
+    memberModals.forEach(modal => {
+        modal.addEventListener("shown.bs.modal", () => {
+            const closeBtn = modal.querySelector(".btn-close");
+            if (closeBtn) {
+                closeBtn.focus();
+            }
+        });
+    });
+});
