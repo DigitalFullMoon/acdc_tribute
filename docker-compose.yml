@@ -1,15 +1,30 @@
 version: "3.8"
 
+# ============================================
+# 1. SERVICES
+# ============================================
 services:
+
+  # --------------------------------------------
+  # 1.1. Service NGINX (serveur web principal)
+  # --------------------------------------------
   web:
     image: nginx:stable-alpine
     container_name: acdc_tribute
+
+    # Ports exposés
     ports:
       - "8081:80"
+
+    # Volumes montés (site statique + config nginx)
     volumes:
       - ./site:/usr/share/nginx/html:ro
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    # Redémarrage automatique sauf arrêt manuel
     restart: unless-stopped
+
+    # Vérification de santé du service
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
       interval: 30s
