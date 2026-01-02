@@ -1,11 +1,3 @@
-// ============================================
-// FICHIER : script.js
-// PROJET : AC/DC Tribute Site
-// AUTEUR : DigitalFullMoon
-// DATE : 2025
-// DESCRIPTION : Scripts principaux structurés et accessibles
-// ============================================
-
 document.addEventListener("DOMContentLoaded", () => {
 
     // ============================================

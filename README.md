@@ -4,6 +4,10 @@
   <img src="site/asset/img/ac-dc-2.webp" alt="Logo AC/DC" width="300">
 </p>
 
+<p align="center">
+   <img src="site/asset/img/mock up/mock up DigitalFullMoon.webp" alt="Mock up DigitalFullMoon" width="600" style="display:block;margin:auto;">
+</p>
+
 Ce mini projet est issu d'un TP de ma formation de Développeur Web Web Mobile. Pour les besoins de mon portfolio, je l'ai entièrement refait, en incluant de nouvelles fonctionnalités et un travail en local avec Docker.
 
 ---
@@ -14,7 +18,6 @@ Ce mini projet est issu d'un TP de ma formation de Développeur Web Web Mobile. 
 02-ACDC_TRIBUTE/
 ├── docker-compose.yml
 ├── README.md
-├── zzlire.txt
 ├── docker/
 │   └── nginx/
 │       └── default.conf
